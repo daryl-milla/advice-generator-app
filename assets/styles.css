@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    /* Colors Primary*/
+    --lightCyan: hsl(193, 38%, 86%);
+    --neonGreen: hsl(150, 100%, 66%);
+    /* Neutral */
+    --grayishBLue: hsl(217, 19%, 38%);
+    --darkGrayishBlue: hsl(217, 19%, 24%);
+    --darkBlue: hsl(218, 23%, 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--darkBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Manrope", sans-serif;
+}
+
+.advice-container {
+    background-color: hsl(217, 19%, 24%);
+    margin: 120px 16px 0;
+    max-height: 315px;
+    max-width: 343px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px 24px 64px;
+}
+
+.advice-number {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3.46px;
+    color: var(--neonGreen);
+
+}
+
+.advice-text {
+    color: var(--lightCyan);
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 24px;
+    letter-spacing: -0.26px;
+}
+
+.icon-separator {
+    margin-top: 24px;
+}
+
+.icon-separator img {
+    max-height: 16px;
+}
+
+.icon-separator.desktop {
+    display: none;
+}
+
+.button-generate {
+    border: none;
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    background-color: var(--neonGreen);
+    margin-top: -32px;
+    cursor: pointer;
+}
+
+.button-generate:hover {
+    box-shadow: 0px 0px 40px 0px var(--neonGreen);
+}
+
+/* media queries */
+
+@media (width >= 600px) {
+    .advice-container {
+        max-width: 540px;
+        max-height: 332px;
+        padding: 48px 48px 72px;
+        margin: 120px 0 0;
+        border-radius: 15px;
+    }
+
+    .advice-number {
+        font-size: 13px;
+    }
+
+    .advice-text {
+        font-size: 28px;
+        letter-spacing: -0.3px;
+    }
+
+    .icon-separator {
+        margin-top: 40px;
+    }
+
+    .icon-separator.mobile {
+        display: none;
+    }
+
+    .icon-separator.desktop {
+        display: block;
+    }
+
+}
